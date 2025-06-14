@@ -1,15 +1,25 @@
-// nuxt.config.ts
-// https://nuxt.com/docs/api/configuration/nuxt-config
-export default ({
+import { defineNuxtConfig } from 'nuxt/config';
+
+export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
+
+  // Módulos
   modules: [
     '@nuxt/eslint',
     '@nuxt/image',
     '@nuxt/fonts',
     '@nuxt/icon',
-    '@nuxtjs/i18n',
+    '@nuxtjs/i18n'
   ],
+
+  // Configuración para Github Pages
+  ssr: false,
+  app: {
+    baseURL: '/portfolio/',
+  },
+
+  // Internacionalización
   i18n: {
     locales: [
       { code: 'es', name: 'Español', file: 'es.json' },
@@ -18,6 +28,6 @@ export default ({
     defaultLocale: 'es',
     lazy: true,
     langDir: 'locales/',
-    bundle: { optimizeTranslationDirective: false },
-  },
+    bundle: { optimizeTranslationDirective: false},
+  }
 });
