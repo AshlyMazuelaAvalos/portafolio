@@ -1,21 +1,25 @@
-// nuxt.config.ts
-// https://nuxt.com/docs/api/configuration/nuxt-config
-import vuetify from 'vite-plugin-vuetify';
+import { defineNuxtConfig } from 'nuxt/config';
 
-export default ({
+export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
-  css: ['vuetify/styles'],
-  build: {
-    transpile: ['vuetify'],
-  },
+
+  // Módulos
   modules: [
     '@nuxt/eslint',
     '@nuxt/image',
     '@nuxt/fonts',
     '@nuxt/icon',
-    '@nuxtjs/i18n',
+    '@nuxtjs/i18n'
   ],
+
+  // Configuración para Github Pages
+  ssr: false,
+  app: {
+    baseURL: '/portfolio/',
+  },
+
+  // Internacionalización
   i18n: {
     locales: [
       { code: 'es', name: 'Español', file: 'es.json' },
@@ -24,12 +28,6 @@ export default ({
     defaultLocale: 'es',
     lazy: true,
     langDir: 'locales/',
-    bundle: { optimizeTranslationDirective: false },
-  },
-  vite: {
-    define: {
-      'process.env.DEBUG': false,
-    },
-    plugins: [vuetify({ autoImport: true})],
-  },
+    bundle: { optimizeTranslationDirective: false},
+  }
 });

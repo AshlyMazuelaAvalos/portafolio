@@ -15,7 +15,7 @@ export default withNuxt({
         'vue/no-v-html': 'error', // Permite usar v-html (aunque puede implicar riesgos XSS).
         'vue/require-default-prop': 'off', // Permite props sin valor por defecto.
         'vue/html-self-closing': 'error', // Sugiere usar etiquetas autocerradas (<img />, <input />).
-        'vue/max-attributes-per-line': ["error", { "singleline": { "max": 1 }, "multiline": {"max":1}}],
+        'vue/max-attributes-per-line': ["error", { "singleline": { "max": 3 }, "multiline": {"max":1}}],
         'vue/require-prop-types': 'error', // Sugiere declarar los tipos de props.
         'vue/component-name-in-template-casing': ['error', 'PascalCase'], // Exige que los componentes en el template estén en PascalCase.
         'vue/no-mutating-props': 'error', // Evita modificar props directamente dentro del componente.
