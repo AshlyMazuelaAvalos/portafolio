@@ -1,6 +1,6 @@
 // plugins/vuetify.ts
 import { createVuetify } from 'vuetify';
-import 'vuetify/styles';
+import 'vuetify/styles'; 
 import * as components from 'vuetify/components';
 import * as directives from 'vuetify/directives';
 
@@ -26,7 +26,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         dark: {
           dark: true,
           colors: {            
-            background: '#140b18 ',     
+            background: '#140b18',     
             surface: '#2a1733',        
             primary: '#4B2E83',
             secondary: '#E4DCF1',
